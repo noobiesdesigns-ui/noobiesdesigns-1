@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '/assets/logo.png';
 
 interface LogoProps {
   onClick: () => void;
@@ -12,7 +13,7 @@ export const Logo: React.FC<LogoProps> = ({ onClick }) => {
     >
       <div className="w-24 md:w-32">
         <img 
-          src="assets/logo.png"
+          src={logo}
           alt="Noobies Design"
           className="w-full h-auto object-contain"
         />

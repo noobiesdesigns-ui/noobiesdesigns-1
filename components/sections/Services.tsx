@@ -2,34 +2,38 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { SectionProps, Service } from '../../types';
+import s1 from '/assets/s1.png';
+import s2 from '/assets/s2.png';
+import s3 from '/assets/s3.png';
+import s4 from '/assets/s4.png';
 
 export const serviceData: Service[] = [
   {
     id: '01',
     title: 'Logo Design',
     description: 'Crafting memorable, timeless marks that capture the pure essence of your business.',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop',
+    image: s1,
     projects: []
   },
   {
     id: '02',
     title: 'UX/UI Design',
     description: 'Transforming complex systems into intuitive, visually refined digital interfaces.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2000&auto=format&fit=crop',
+    image: s2,
     projects: []
   },
   {
     id: '03',
     title: 'Branding Identity',
     description: 'Building cohesive visual systems and scalable brand languages from strategy to execution.',
-    image: 'https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?q=80&w=2000&auto=format&fit=crop',
+    image: s3,
     projects: []
   },
   {
     id: '04',
     title: 'Web & App Design',
     description: 'Creating immersive digital experiences designed for clarity, engagement, and growth.',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2000&auto=format&fit=crop',
+    image: s4,
     projects: []
   },
 ];

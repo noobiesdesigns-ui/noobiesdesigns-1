@@ -5,33 +5,33 @@ import { Project, SectionProps } from '../../types';
 const projects: Project[] = [
     { 
         id: 1, 
-        title: 'Nebula', 
-        category: 'Web Design', 
-        imageUrl: 'https://images.unsplash.com/photo-1481487484168-9b930d55208d?q=80&w=2000&auto=format&fit=crop', 
-        year: '2023',
-        client: 'Nebula Cloud Systems',
-        description: 'A futuristic web interface for a next-generation cloud computing platform. The design focuses on data visualization, dark mode aesthetics, and seamless user flows.',
-        tags: ['UI/UX', 'Dashboard', 'Dark Mode']
+        title: 'B2B Hub', 
+        category: 'Logo Design', 
+        imageUrl: '/assets/work1.png', 
+        year: '2022',
+        client: 'Vts Private Limited',
+        description: 'A sharp, modern logo for B2B Hub symbolizing business connection and professional growth.',
+        tags: ['Logo', 'Minimalist', 'elegant']
     },
     { 
         id: 2, 
-        title: 'Mono', 
-        category: 'Branding', 
-        imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop', 
-        year: '2023',
-        client: 'Mono Architects',
-        description: 'A minimalist branding identity for a high-end architectural firm. The visual language utilizes stark contrast, negative space, and Swiss typography.',
-        tags: ['Identity', 'Print', 'Art Direction']
+        title: 'Porfolio', 
+        category: 'Web Design', 
+        imageUrl: '/assets/work2.png', 
+        year: '2024',
+        client: 'LogoBoi',
+        description: 'A sleek personal portfolio website for a graphic designer, focused on bold layouts, clean grids, and smooth visual storytelling.',
+        tags: ['UI/UX', 'Website', 'Elegant']
     },
     { 
         id: 3, 
-        title: 'Flux', 
+        title: 'Vastraa', 
         category: 'App Design', 
-        imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000&auto=format&fit=crop', 
-        year: '2022',
-        client: 'FinTech Solutions',
-        description: 'A high-performance trading application designed for speed and clarity. We stripped away visual noise to focus on real-time data.',
-        tags: ['Mobile App', 'FinTech', 'Interaction']
+        imageUrl: '/assets/work3.png',
+        year: '2024',
+        client: 'Parul',
+        description: 'A modern saree delivery app focused on smooth browsing, rich product visuals, and a seamless checkout experience tailored for fast, convenient shopping.',
+        tags: ['Mobile App', 'UI/UX', 'Modern']
     },
 ];
 
