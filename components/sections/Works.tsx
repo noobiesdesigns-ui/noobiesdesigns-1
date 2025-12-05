@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Project, SectionProps } from '../../types';
+import work1 from '/assets/work1.png';
+import work2 from '/assets/work2.png';
+import work3 from '/assets/work3.png';
 
 const projects: Project[] = [
     { 
         id: 1, 
         title: 'B2B Hub', 
         category: 'Logo Design', 
-        imageUrl: '/assets/work1.png', 
+        imageUrl: work1, 
         year: '2022',
         client: 'Vts Private Limited',
         description: 'A sharp, modern logo for B2B Hub symbolizing business connection and professional growth.',
@@ -17,7 +20,7 @@ const projects: Project[] = [
         id: 2, 
         title: 'Porfolio', 
         category: 'Web Design', 
-        imageUrl: '/assets/work2.png', 
+        imageUrl: work2, 
         year: '2024',
         client: 'LogoBoi',
         description: 'A sleek personal portfolio website for a graphic designer, focused on bold layouts, clean grids, and smooth visual storytelling.',
@@ -27,7 +30,7 @@ const projects: Project[] = [
         id: 3, 
         title: 'Vastraa', 
         category: 'App Design', 
-        imageUrl: '/assets/work3.png',
+        imageUrl: work3,
         year: '2024',
         client: 'Parul',
         description: 'A modern saree delivery app focused on smooth browsing, rich product visuals, and a seamless checkout experience tailored for fast, convenient shopping.',
