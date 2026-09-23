@@ -10,12 +10,15 @@ html, body, #root {
 
 body {
   overflow: hidden;
+  cursor: auto;
 }
 
 * {
   box-sizing: border-box;
+  cursor: auto;
 }
 
-button, input, textarea, select {
+button, input, textarea, select, a {
   font: inherit;
+  cursor: auto;
 }

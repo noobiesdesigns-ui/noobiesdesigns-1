@@ -6,7 +6,6 @@ import { About } from './components/sections/About';
 import { Services } from './components/sections/Services';
 import { Contact } from './components/sections/Contact';
 import { ServiceDetailOverlay } from './components/ServiceDetailOverlay';
-import SwarmCursor from './components/SwarmCursor';
 import { serviceData } from './components/sections/Services';
 
 
@@ -157,22 +156,6 @@ const App: React.FC = () => {
 
   return (
     <div className="relative bg-[#f6f3ee] text-black font-sans selection:bg-black selection:text-white w-full h-full overflow-hidden fixed inset-0 z-0">
-          <SwarmCursor
-            color="#000000"
-            accentColor="#000000"
-            count={10}
-            size={2.2}
-            merge={0.28}
-            glow={0.12}
-            opacity={0.95}
-            spread={72}
-            separation={0.7}
-            speed={1.5}
-            wander={0.28}
-            trail={0.9}
-            enabled={true}
-          />
-
           <motion.div className="relative z-20 w-full h-full">
             <div className="fixed top-0 left-0 h-1 bg-gray-100 w-full z-[100]">
               <motion.div

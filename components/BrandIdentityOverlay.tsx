@@ -9,13 +9,40 @@ interface BrandIdentityOverlayProps {
 }
 
 export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ project, onClose }) => {
-  const [galleryVisible, setGalleryVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setGalleryVisible(false);
-    const timer = window.setTimeout(() => setGalleryVisible(true), 2200);
-    return () => window.clearTimeout(timer);
-  }, [project.id]);
+    let cancelled = false;
+    setIsLoading(true);
+
+    const imageSources = project.galleryImages ?? [];
+
+    const preloadImages = Promise.all(
+      imageSources.map(
+        (src) =>
+          new Promise<void>((resolve) => {
+            const img = new window.Image();
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+            img.src = src;
+          }),
+      ),
+    );
+
+    const minimumDelay = new Promise<void>((resolve) => {
+      window.setTimeout(resolve, 2400);
+    });
+
+    Promise.all([preloadImages, minimumDelay]).then(() => {
+      if (!cancelled) {
+        window.setTimeout(() => setIsLoading(false), 150);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [project.id, project.galleryImages]);
 
   return (
     <motion.div
@@ -43,7 +70,7 @@ export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ proj
           <X size={22} />
         </button>
 
-        {!galleryVisible ? (
+        {isLoading ? (
           <div className="flex h-full items-center justify-center bg-[#f5f1eb] text-black">
             <div className="flex flex-col items-center gap-4">
               <div className="h-12 w-12 animate-spin rounded-full border-2 border-black/15 border-t-black" />
