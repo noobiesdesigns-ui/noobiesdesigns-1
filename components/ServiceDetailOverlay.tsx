@@ -166,7 +166,7 @@ const PureVideoCard: React.FC<PureVideoCardProps> = ({
           : 'shadow-lg hover:shadow-xl'
       }`}
       style={{
-        width: 'clamp(180px, 20vw, 270px)',
+        width: 'clamp(250px, 43vw, 360px)',
         aspectRatio: '9/16',
       }}
     >
@@ -273,7 +273,7 @@ const VideoEditingContent: React.FC = () => {
     >
 
       {/* ══ CATEGORY 01: TALKING HEAD ══ */}
-      <div className="flex-shrink-0 px-6 md:px-16 pt-8 md:pt-10">
+      <div className="flex-shrink-0 px-4 md:px-8 pt-8 md:pt-10 w-full max-w-[1180px] mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -308,14 +308,14 @@ const VideoEditingContent: React.FC = () => {
       </div>
 
       {/* REELS ROW — PURE VIDEO, ZERO HUD */}
-      <div className="flex-shrink-0 px-6 md:px-16 pb-12">
+      <div className="flex-shrink-0 px-4 md:px-8 pb-12 w-full max-w-[1180px] mx-auto">
         <div
           onPointerDown={handleRowPointerDown}
           onPointerMove={handleRowPointerMove}
           onPointerUp={handleRowPointerUp}
           onPointerCancel={handleRowPointerUp}
           onClickCapture={handleRowClickCapture}
-          className="flex w-full min-w-0 flex-nowrap cursor-grab select-none items-center justify-start gap-4 overflow-x-auto pb-4 touch-pan-x no-scrollbar active:cursor-grabbing md:gap-6"
+          className="flex w-full min-w-0 flex-nowrap cursor-grab select-none items-center justify-start gap-4 overflow-x-auto pb-4 touch-pan-x no-scrollbar active:cursor-grabbing md:gap-5"
         >
           {talkingHeadOrder.map((reel, i) => (
             <PureVideoCard
@@ -336,7 +336,7 @@ const VideoEditingContent: React.FC = () => {
       </div>
 
       {/* ══ CATEGORY 02: MOTION GRAPHIC ══ */}
-      <div className="flex-shrink-0 px-6 md:px-16 pt-8 border-t border-gray-100 pb-12">
+      <div className="flex-shrink-0 px-4 md:px-8 pt-8 border-t border-gray-100 pb-12 w-full max-w-[1180px] mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -397,7 +397,7 @@ const VideoEditingContent: React.FC = () => {
       </div>
 
       {/* ══ CATEGORY 03: PRODUCT SHOWCASE ══ */}
-      <div className="flex-shrink-0 px-6 md:px-16 pt-8 border-t border-gray-100 pb-16">
+      <div className="flex-shrink-0 px-4 md:px-8 pt-8 border-t border-gray-100 pb-16 w-full max-w-[1180px] mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

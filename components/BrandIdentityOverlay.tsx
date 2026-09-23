@@ -12,9 +12,10 @@ export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ proj
   const [galleryVisible, setGalleryVisible] = useState(false);
 
   useEffect(() => {
-    const frame = requestAnimationFrame(() => setGalleryVisible(true));
-    return () => cancelAnimationFrame(frame);
-  }, []);
+    setGalleryVisible(false);
+    const timer = window.setTimeout(() => setGalleryVisible(true), 2200);
+    return () => window.clearTimeout(timer);
+  }, [project.id]);
 
   return (
     <motion.div
@@ -42,20 +43,29 @@ export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ proj
           <X size={22} />
         </button>
 
-        <div className="h-full min-h-0 overflow-y-auto scroll-smooth overscroll-contain bg-gray-100">
-          <div className="flex flex-col gap-3 md:gap-5 p-3 md:p-6">
-            {galleryVisible && project.galleryImages?.map((image, index) => (
-              <img
-                key={image}
-                src={image}
-                alt={`${project.title} brand identity ${index + 1}`}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto object-cover bg-white shadow-sm"
-              />
-            ))}
+        {!galleryVisible ? (
+          <div className="flex h-full items-center justify-center bg-[#f5f1eb] text-black">
+            <div className="flex flex-col items-center gap-4">
+              <div className="h-12 w-12 animate-spin rounded-full border-2 border-black/15 border-t-black" />
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-black/60">Loading</div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="h-full min-h-0 overflow-y-auto scroll-smooth overscroll-contain bg-gray-100">
+            <div className="flex flex-col gap-3 md:gap-5 p-3 md:p-6">
+              {project.galleryImages?.map((image, index) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt={`${project.title} brand identity ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto object-cover bg-white shadow-sm"
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );

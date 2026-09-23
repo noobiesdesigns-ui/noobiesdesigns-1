@@ -93,9 +93,9 @@ export const Services: React.FC<SectionProps> = ({ x, onServiceClick }) => {
           <div
             key={service.id}
             onClick={() => onServiceClick && onServiceClick(service.id)}
-            className="flex-1 h-full border-r border-gray-200 min-w-[85vw] md:min-w-[25vw] 
-                       flex flex-col justify-between p-6 md:p-12 pb-24 md:pb-12 
-                       group hover:bg-neutral-50 transition-all duration-500 
+            className="flex-1 h-full border-r border-gray-200 min-w-[70vw] md:min-w-[20vw] lg:min-w-[22vw]
+                       flex flex-col justify-between p-6 md:p-10 pb-20 md:pb-10
+                       group hover:bg-neutral-50 transition-all duration-500
                        relative overflow-hidden cursor-pointer"
           >
 

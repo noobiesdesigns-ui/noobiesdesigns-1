@@ -22,7 +22,7 @@ export const Navigation: React.FC<NavigationProps> = ({ items, currentSection, o
             onClick={() => onNavigate(index)}
             className={`text-[10px] md:text-xs font-display uppercase tracking-[0.25em] relative group overflow-hidden px-3 py-2 transition-all duration-300 ${
               currentSection === item.id
-                ? 'font-bold opacity-100 bg-black text-accent rounded-full'
+                ? 'font-bold opacity-100 text-black'
                 : 'font-normal opacity-70 hover:opacity-100 text-black hover:text-accent'
             }`}
           >
