@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Project, SectionProps } from '../../types';
-import work1 from '/assets/work1.png';
-import work2 from '/assets/work2.png';
-import work3 from '/assets/work3.png';
+import brandIdentityCover from '../../assets/works cover/brand identity.png';
+import contentCreationCover from '../../assets/works cover/content creation.jpg';
+import socialMediaCover from '../../assets/works cover/social media.jpg';
+import videoEditingCover from '../../assets/works cover/video editing.jpg';
 import scaderIcon from '../../assets/branding icon/scader.png';
 import scaderImage1 from '../../assets/branding/scader/1.jpg';
 import scaderImage2 from '../../assets/branding/scader/2.jpg';
@@ -25,7 +26,7 @@ const projects: Project[] = [
         id: 0,
         title: 'Scader',
         category: 'Brand Identity',
-        imageUrl: scaderIcon,
+        imageUrl: brandIdentityCover,
         year: '2024',
         client: 'Scader',
         description: 'A complete brand identity system for Scader.',
@@ -37,7 +38,7 @@ const projects: Project[] = [
         id: 1,
         title: 'Forest and Ray',
         category: 'Brand Identity',
-        imageUrl: forestAndRayIcon,
+        imageUrl: brandIdentityCover,
         year: '2024',
         client: 'Forest and Ray',
         description: 'A complete brand identity system for Forest and Ray.',
@@ -48,8 +49,8 @@ const projects: Project[] = [
     { 
         id: 2, 
         title: 'B2B Hub', 
-        category: 'Logo Design', 
-        imageUrl: work1, 
+        category: 'Content Creation', 
+        imageUrl: contentCreationCover, 
         year: '2022',
         client: 'Vts Private Limited',
         description: 'A sharp, modern logo for B2B Hub symbolizing business connection and professional growth.',
@@ -58,8 +59,8 @@ const projects: Project[] = [
     { 
         id: 3, 
         title: 'Porfolio', 
-        category: 'Web Design', 
-        imageUrl: work2, 
+        category: 'Social Media', 
+        imageUrl: socialMediaCover, 
         year: '2024',
         client: 'LogoBoi',
         description: 'A sleek personal portfolio website for a graphic designer, focused on bold layouts, clean grids, and smooth visual storytelling.',
@@ -68,8 +69,8 @@ const projects: Project[] = [
     { 
         id: 4, 
         title: 'Vastraa', 
-        category: 'App Design', 
-        imageUrl: work3,
+        category: 'Video Editing', 
+        imageUrl: videoEditingCover,
         year: '2024',
         client: 'Parul',
         description: 'A modern saree delivery app focused on smooth browsing, rich product visuals, and a seamless checkout experience tailored for fast, convenient shopping.',

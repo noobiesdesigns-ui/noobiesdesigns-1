@@ -48,11 +48,11 @@ export const Contact: React.FC<SectionProps> = ({ x }) => {
 
 
 
-  const services = ['Logo Design', 'UX/UI Design', 'Branding Identity', 'Web & App Design', 'Other'];
+  const services = ['Logo Design', 'UX/UI Design', 'Branding Identity', 'Web & App Design', 'Video Editing', 'Content Creation', 'Other'];
 
   const socialLinks = [
-    { Icon: Instagram, url: 'https://www.instagram.com/noobies_design/' },
-    { Icon: Linkedin, url: '#' },
+    { Icon: Instagram, url: 'https://www.instagram.com/noobies.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==', label: 'Instagram' },
+    { Icon: Linkedin, url: 'https://www.linkedin.com/in/mohamed-shafiq-185bb4253', label: 'LinkedIn' },
   ];
 
   return (
@@ -178,7 +178,7 @@ export const Contact: React.FC<SectionProps> = ({ x }) => {
                             <select 
                                 value={formData.service}
                                 onChange={(e) => setFormData({...formData, service: e.target.value})}
-                                className="w-full border-b border-gray-400 py-2 bg-transparent outline-none focus:border-white font-display text-lg md:text-xl appearance-none cursor-pointer hover:text-accent transition-colors text-white"
+                                className="w-full border-b border-gray-400 py-2 bg-transparent outline-none focus:border-black font-display text-lg md:text-xl appearance-none cursor-pointer hover:text-accent transition-colors text-black"
                             >
                                 {services.map(s => <option key={s} value={s}>{s}</option>)}
                             </select>
@@ -206,13 +206,14 @@ export const Contact: React.FC<SectionProps> = ({ x }) => {
                  </form>
 
                  <div className="flex justify-center gap-8 mt-8 md:mt-12">
-                    {socialLinks.map(({ Icon, url }, idx) => (
+                    {socialLinks.map(({ Icon, url, label }, idx) => (
                         <a 
                             key={idx} 
                             href={url} 
                             target={url.startsWith('http') ? "_blank" : undefined}
                             rel={url.startsWith('http') ? "noopener noreferrer" : undefined}
-                            className="text-gray-400 hover:scale-110 hover:text-white transition-all duration-300"
+                            aria-label={label}
+                            className="flex items-center justify-center text-gray-400 hover:scale-110 hover:text-black focus-visible:text-black transition-all duration-300"
                         >
                             <Icon size={24} strokeWidth={1.5} />
                         </a>
@@ -221,12 +222,6 @@ export const Contact: React.FC<SectionProps> = ({ x }) => {
             </motion.div>
         )}
       </AnimatePresence>
-        
-      <footer className="absolute bottom-8 right-8 text-right hidden md:block">
-            <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
-                &copy; 2025 Noobies Design
-            </span>
-      </footer>
     </section>
   );
 };

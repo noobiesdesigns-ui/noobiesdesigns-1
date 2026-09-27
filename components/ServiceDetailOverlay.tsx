@@ -178,7 +178,7 @@ const PureVideoCard: React.FC<PureVideoCardProps> = ({
         loop={!isActive}
         muted={!isActive}
         playsInline
-        preload="auto"
+        preload="metadata"
         onEnded={onEnded}
         className="w-full h-full object-cover"
       />

@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({ onClick }) => {
       <div className="w-24 md:w-32">
         <img 
           src={logo}
-          alt="Noobies Design"
+          alt="Portfolio"
           className="w-full h-auto object-contain"
         />
       </div>

@@ -22,3 +22,13 @@ button, input, textarea, select, a {
   font: inherit;
   cursor: auto;
 }
+
+a {
+  color: inherit;
+}
+
+a:visited,
+a:focus-visible,
+a:active {
+  color: inherit;
+}

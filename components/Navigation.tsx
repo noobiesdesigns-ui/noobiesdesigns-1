@@ -77,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({ items, currentSection, o
             </div>
 
             <div className="absolute bottom-12 text-xs font-mono uppercase tracking-[0.2em] text-gray-400">
-                Noobies Design
+                Portfolio
             </div>
           </motion.div>
         )}

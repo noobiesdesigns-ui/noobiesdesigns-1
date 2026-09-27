@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { SectionProps, Service } from '../../types';
-import s1 from '/assets/s1.png';
-import s2 from '/assets/s2.png';
-import s3 from '/assets/s3.png';
-import s4 from '/assets/s4.png';
+import brandIdentityCover from '../../assets/works cover/brand identity.png';
+import contentCreationCover from '../../assets/works cover/content creation.jpg';
+import socialMediaCover from '../../assets/works cover/social media.jpg';
+import videoEditingCover from '../../assets/works cover/video editing.jpg';
 import scaderIcon from '../../assets/branding icon/scader.png';
 import scaderImage1 from '../../assets/branding/scader/1.jpg';
 import scaderImage2 from '../../assets/branding/scader/2.jpg';
@@ -34,7 +34,7 @@ export const serviceData: Service[] = [
     id: '01',
     title: 'Brand Identity',
     description: 'Crafting cohesive visual systems — logos, type, colour and tone — that make brands impossible to forget.',
-    image: s1,
+    image: brandIdentityCover,
     projects: [{
       id: 'payana-overseas-solutions',
       title: 'Payana Overseas Solutions',
@@ -65,21 +65,21 @@ export const serviceData: Service[] = [
     id: '02',
     title: 'Video Editing',
     description: 'Cutting and composing footage into polished, story-driven films that hold attention from first frame to last.',
-    image: s2,
+    image: videoEditingCover,
     projects: []
   },
   {
     id: '03',
     title: 'Social Media',
     description: 'Creating scroll-stopping visuals and content tailored for social platforms, campaigns and digital communities.',
-    image: s3,
+    image: socialMediaCover,
     projects: []
   },
   {
     id: '04',
-    title: 'Visual Design',
-    description: 'Translating ideas into refined, purposeful graphics — from print collateral to digital assets.',
-    image: s4,
+    title: 'Content Creation',
+    description: 'Turning ideas into social-first visual stories, campaigns and assets that hold attention and move people to act.',
+    image: contentCreationCover,
     projects: []
   },
 ];

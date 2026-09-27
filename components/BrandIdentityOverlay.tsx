@@ -15,9 +15,9 @@ export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ proj
     let cancelled = false;
     setIsLoading(true);
 
-    const imageSources = project.galleryImages ?? [];
+    const imageSources = (project.galleryImages ?? []).slice(0, 4);
 
-    const preloadImages = Promise.all(
+    const preloadImages = Promise.allSettled(
       imageSources.map(
         (src) =>
           new Promise<void>((resolve) => {
@@ -29,13 +29,9 @@ export const BrandIdentityOverlay: React.FC<BrandIdentityOverlayProps> = ({ proj
       ),
     );
 
-    const minimumDelay = new Promise<void>((resolve) => {
-      window.setTimeout(resolve, 2400);
-    });
-
-    Promise.all([preloadImages, minimumDelay]).then(() => {
+    preloadImages.then(() => {
       if (!cancelled) {
-        window.setTimeout(() => setIsLoading(false), 150);
+        window.setTimeout(() => setIsLoading(false), 120);
       }
     });
 
